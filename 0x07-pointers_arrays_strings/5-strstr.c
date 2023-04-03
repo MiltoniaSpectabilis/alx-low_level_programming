@@ -9,22 +9,21 @@
  * found
  */
 
-char *_strstr(char *haystack, char *needle) {
-    int haystack_len = strlen(haystack);
-    int needle_len = strlen(needle);
-    int i, j;
+char *_strstr(char *haystack, char *needle)
+{
+	for (; *haystack != '\0'; haystack++)
+	{
+		char *l = haystack;
+		char *p = needle;
 
-    for (i = 0; i <= haystack_len - needle_len; i++) {
-        for (j = 0; j < needle_len; j++) {
-            if (haystack[i + j] != needle[j]) {
-                break;
-            }
-        }
-        if (j == needle_len) {
-            return &haystack[i];
-        }
-    }
+		while (*l == *p && *p != '\0')
+		{
+			l++;
+			p++;
+		}
 
-    return NULL;
+		if (*p == '\0')
+			return (haystack);
+	}
+	return (0);
 }
-
