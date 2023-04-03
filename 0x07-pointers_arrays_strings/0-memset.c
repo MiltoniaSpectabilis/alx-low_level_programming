@@ -8,23 +8,14 @@
  *
  * Return: changed array with new value for n bytes
  */
-
-include
-
 char *_memset(char *s, char b, unsigned int n)
-
 {
-	if (s == NULL  n <= 0)
+	int i = 0;
 
-	{
-		return (s);
-	}
-
-	for (unsigned int i = 0; i < n; i++)
-
+	for (; n > 0; i++)
 	{
 		s[i] = b;
+		n--;
 	}
-
 	return (s);
 }
