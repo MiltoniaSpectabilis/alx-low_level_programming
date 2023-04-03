@@ -2,12 +2,10 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - Entry point
- * @a: input
- * @size: input
- * Return: Always 0 (Success)
+ * print_diagsums - prints the sum of the two diagonals of a square matrix
+ * @a: pointer to the matrix
+ * @size: size of the matrix
  */
-
 
 void print_diagsums(int *a, int size)
 
