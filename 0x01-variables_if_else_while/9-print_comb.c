@@ -19,8 +19,12 @@ int main(void)
 
 		if (sDigit != 57)
 
+		{
+
 			putchar(',');
-		putchar(' ');
+			putchar(' ');
+		}
+
 	}
 
 	putchar('\n');
