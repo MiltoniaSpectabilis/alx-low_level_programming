@@ -12,7 +12,7 @@ int main(void)
 {
 	char alpha = 'z';
 
-	for (alpha; alpha >= 'a'; --alpha)
+	for (; alpha >= 'a'; --alpha)
 	{
 		putchar(alpha);
 	}
