@@ -10,7 +10,7 @@ int main(void)
 {
 	int fDigit, sDigit;
 
-	for (fDigit = 48; fDigit < 58; fDigit++)
+	for (fDigit = 48; fDigit < 57; fDigit++)
 	{
 		for (sDigit = fDigit + 1; sDigit < 58; sDigit++)
 		{
