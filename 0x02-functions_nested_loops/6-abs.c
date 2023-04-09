@@ -1,15 +1,26 @@
 #include "main.h"
 
 /**
- * _abs - computes the absolute value of an integer
- * @n: the int to check
- * Return: the absolute value of int
+ * _abs - computes the absolute value of an integer.
+ *
+ * @int: random integer.
+ *
+ * Return: Always 0.
  */
-int _abs(int n)
+
+int _abs(int)
 {
-	if (n >= 0)
+
+	if (int > 0)
+
 	{
-		return (n);
+		_putchar(int);
 	}
-	return (-n);
+
+	else
+
+	{
+		_putchar(-int);
+	}
+
 }
