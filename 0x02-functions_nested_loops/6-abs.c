@@ -3,24 +3,24 @@
 /**
  * _abs - computes the absolute value of an integer.
  *
- * @int: random integer.
+ * @num: random number.
  *
- * Return: Always 0.
+ * Return: num if positive number and -num if negative.
  */
 
-int _abs(int)
+int _abs(int num)
 {
 
-	if (int > 0)
+	if (num > 0)
 
 	{
-		_putchar(int);
+		return (num);
 	}
 
 	else
 
 	{
-		_putchar(-int);
+		return (-num);
 	}
 
 }
