@@ -9,9 +9,9 @@ void jack_bauer(void)
 {
 	int m, h; 
 
-	for (m = 0; m < 24; m++)
+	for (m = 0; m < 24; ++m)
 	{
-		for (h = m; h < 60; h++)
+		for (h = m; h < 60; ++h)
 		{
 			_putchar(m + '0');
 			_putchar(':');
