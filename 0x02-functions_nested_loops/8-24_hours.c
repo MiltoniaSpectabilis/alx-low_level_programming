@@ -7,14 +7,15 @@
 
 void jack_bauer(void)
 {
+	int m, h; 
 
-	for (i = 0; i < 24; i++)
+	for (m = 0; m < 24; m++)
 	{
-		for (k = 0; k < 60; i++)
+		for (h = 0; h < 60; h++)
 		{
-			_putchar(i + '0');
+			_putchar(m + '0');
 			_putchar(':');
-			_putchar(k + '0');
+			_putchar(h + '0');
 		}
 	}
 }
