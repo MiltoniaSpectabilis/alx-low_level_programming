@@ -7,35 +7,35 @@
  * @n: natural number
  *
  */
-
-void print_to_98(int n)
+void print_to_98(int n) 
 {
-	if (n <= 98)
-	{
-		for (i = n; i <= 98; i++)
-		{
-			printf("%d, ", i);
 
-			if (i == 98)
+	if (n <= 98) 
+	{
+		for (; n <= 98; n++) 
+		{
+			if (n != 98) 
 			{
-				printf("%d", i);
+				printf("%d, ", n);
+			} 
+			else 
+			{
+				printf("%d\n", n);
 			}
 		}
-
-	if (n >= 98)
+	} 
+	else 
 	{
-		for (n = j; j >= 98; n--)
+		for (; n >= 98; n--) 
 		{
-			printf("%d, ", j);
-			if (j == 98)
+			if (n != 98) 
 			{
-				printf("%d", j);
+				printf("%d, ", n);
+			}
+			else 
+			{
+				printf("%d\n", n);
 			}
 		}
-
-
-	}
-	printf("\n");
-
 	}
 }
