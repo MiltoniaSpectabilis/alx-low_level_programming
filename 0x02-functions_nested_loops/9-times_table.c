@@ -18,7 +18,8 @@ void times_table(void)
 			if (res <= 9)
 			{
 				_putchar(res + '0');
-				if (num2 != 9) {
+				if (num2 != 9)
+				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
@@ -28,7 +29,8 @@ void times_table(void)
 			{
 				_putchar(res / 10 + '0');
 				_putchar(res % 10 + '0');
-				if (num2 != 9) {
+				if (num2 != 9)
+				{
 					_putchar(',');
 					_putchar(' ');
 				}
