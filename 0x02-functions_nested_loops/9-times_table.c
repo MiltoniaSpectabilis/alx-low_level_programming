@@ -35,13 +35,8 @@ void times_table(void)
 					_putchar(' ');
 				}
 			}
-			if (num2 == 9)
-			{
-				_putchar(36);
-			}
 
 		}
 		_putchar('\n');
 	}
 }
-

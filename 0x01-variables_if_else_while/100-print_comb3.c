@@ -10,12 +10,13 @@ int main(void)
 {
 	int fDigit, sDigit;
 
-	for (fDigit = 48; fDigit < 57; fDigit++)
+	for (fDigit = 48; fDigit < 57; ++fDigit)
 	{
-		for (sDigit = fDigit + 1; sDigit < 58; sDigit++)
+		for (sDigit = fDigit + 1; sDigit < 58; ++sDigit)
 		{
 			putchar(fDigit);
 			putchar(sDigit);
+
 			if (fDigit != 56 || sDigit != 57)
 			{
 				putchar(',');
