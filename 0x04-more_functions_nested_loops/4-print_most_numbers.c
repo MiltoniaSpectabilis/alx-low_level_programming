@@ -1,20 +1,22 @@
 #include "main.h"
 
 /**
- * print_most_numbers - print num except 2 and 4
- *
- * return: void
+ * print_most_numbers - prints the numbers from 0 to 9,
+ * followed by a new line.
  */
 
 void print_most_numbers(void)
 {
-	char c;
+	int randNum;
 
-	for (c = '0'; c <= '9'; c++)
+	for (; randNum <= 9; randNum++)
 	{
-		if (!(c == '2' || c == '4'))
-			_putchar(c);
-	}
-	_putchar('\n');
-}
+		if (randNum == 2 || randNum == 4)
 
+		_putchar(randNum + '0');
+		_putchar('\n');
+
+	}
+
+
+}
