@@ -18,7 +18,7 @@ void times_table(void)
 			{
 				_putchar(prod + '0');
 			}
-			else if (num2 != 0 && prod <= 9 )
+			else if (num2 != 0 && prod <= 9)
 
 			{
 				_putchar(',');
