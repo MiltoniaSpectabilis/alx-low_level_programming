@@ -7,16 +7,20 @@
 
 void print_most_numbers(void)
 {
-	int randNum;
+	int numbers;
 
-	for (; randNum <= 9; randNum++)
+	for (numbers = 0; numbers <= 9; numbers++)
 	{
-		if (randNum == 2 || randNum == 4)
+		if (numbers != 2 && numbers != 4)
+		{
+		_putchar(numbers + '0');
+		}
 
-		_putchar(randNum + '0');
-		_putchar('\n');
+
 
 	}
+
+	_putchar('\n');
 
 
 }
