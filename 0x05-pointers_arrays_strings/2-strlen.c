@@ -3,19 +3,20 @@
 
 /**
  * _strlen -  returns the length of a string
- * @*s : string of characters
+ * @s: string of characters
+ * Return: length
  */
 
 int _strlen(char *s)
 {
 
-    int length = 0;
+	int length = 0;
 
-    while (*s != '\0') 
-    {
-        length++;
-        s++;
-    }
-    return length;
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
+	return (length);
 }
 
