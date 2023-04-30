@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
+ * _puts_recursion - prints a string of characters recursively
  *
- *
+ * @s: character
  *
  */
 
