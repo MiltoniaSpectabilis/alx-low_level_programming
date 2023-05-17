@@ -17,18 +17,19 @@ void print_times_table(int n)
 				prod = i * j;
 
 				if (j == 0)
-					putchar(prod + '0');
+					_putchar(prod + '0');
 
 				else if (prod <= 9)
-					putchar(','), putchar(' '), putchar(' '), putchar(' '), putchar(prod + '0');
+					_putchar(','), _putchar(' '), _putchar(' '), _putchar(' '), _putchar(prod + '0');
 
 				else if (prod <= 99)
-					putchar(','), putchar(' '), putchar(' '), putchar(prod / 10 + '0'), putchar(prod % 10 + '0');
+					_putchar(','), _putchar(' '), _putchar(' '), _putchar(prod / 10 + '0'), _putchar(prod % 10 + '0');
 
 				else
-					putchar(','), putchar(' '), putchar(prod / 100 + '0'), putchar((prod / 10) % 10 + '0'), putchar(prod % 10 + '0');
+					_putchar(','), _putchar(' '), _putchar(prod / 100 + '0'), _putchar((prod / 10) % 10 + '0'),
+					_putchar(prod % 10 + '0');
 			}
-			putchar('\n');
+			_putchar('\n');
 		}
 	}
 
