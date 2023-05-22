@@ -1,34 +1,36 @@
 #include "main.h"
 /**
- * puts_half - a function that prints half of a string
- * @str: string to be printed
- * Return: void
+ * print_second_half - Prints the second half or last n characters of a string.
+ *
+ * @str: The input string.
  */
 
-void puts_half(char *str)
+void print_second_half(char *str)
 {
-	int len = 0;
-	int i;
+    int len = 0;
 
-	while (str[len] != '\0')
-	{
-		len++;
-	}
+    // calculate the length of the input string
+    while (str[len] != '\0')
+    {
+        len++;
+    }
 
-	if (len % 2 == 1)
-	{
+    // print the second half or last n characters of the string
+    if (len % 2 == 0) // even number of characters
+    {
+        for (int i = len / 2; str[i] != '\0'; i++)
+        {
+            putchar(str[i]);
+        }
+    }
 
-		for (i = ((len - 1) / 2); str[i] != '\0'; i++)
-		{
-			_putchar(str[i]);
-		}
-	}
-
-	else
-		for (i = len / 2; str[i] != '\0'; i++)
-		{
-			_putchar(str[i]);
-		}
-
-	putchar('\n');
+    else // odd number of characters
+    {
+        int n = (len - 1) / 2;
+        for (int i = len - n; str[i] != '\0'; i++)
+        {
+            putchar(str[i]);
+        }
+    }
+    putchar('\n');
 }
