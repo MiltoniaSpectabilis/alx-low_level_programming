@@ -8,8 +8,10 @@
  */
 char *cap_string(char *str)
 {
-
 	int i = 0;
+
+	if (str[0] >= 'a' && str[0] <= 'z')
+		str[0] -= ('a' - 'A');
 
 	while (str[i])
 	{
@@ -31,9 +33,12 @@ char *cap_string(char *str)
 				str[i + 1] <= 'z')
 		{
 			i++;
-			str[i] = str[i] - 'a' + 'A';
+			str[i] = str[i] - 'a' + 'A'; /* or you can use -32 which is the ASCII value of ('A' - 'a') */
 		}
 		i++;
 	}
-	return (str);
+	return str;
+
 }
+
+
