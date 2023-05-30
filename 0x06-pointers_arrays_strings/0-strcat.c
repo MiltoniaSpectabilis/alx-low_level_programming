@@ -10,7 +10,7 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int i, j = 0;
+	int i = 0, j = 0;
 
 	/* Find the end of the destination string */
 	while (dest[i] != '\0')
