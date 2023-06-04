@@ -8,27 +8,19 @@
  *
  * Return: a pointer to the resulting string dest
  */
+
 char *_strcat(char *dest, char *src)
 {
 	int i = 0, j = 0;
 
-	/* Find the end of the destination string */
-	while (dest[i] != '\0')
-	{
+	while (dest[i])
 		i++;
-	}
 
-	/* Append the source string to the destination string */
-	while (src[j] != '\0')
+	for (; src[j]; i++, j++)
 	{
 		dest[i] = src[j];
-		i++;
-		j++;
 	}
-
-	/* Add null terminator to the end of the concatenated string */
 	dest[i] = '\0';
 
-	/* Return a pointer to the new, concatenated string */
 	return (dest);
 }
