@@ -16,9 +16,6 @@ int _is_prime_helper(int n, int i);
 
 int is_prime_number(int n)
 {
-	if (n <= 1)
-		return (0);
-
 	return (_is_prime_helper(n, 2));
 }
 
@@ -37,11 +34,15 @@ int is_prime_number(int n)
 
 int _is_prime_helper(int n, int i)
 {
-	if (n == i)
-		return (1);
-
-	if (n % i == 0)
+	if (n <= 1)
 		return (0);
 
-	return (_is_prime_helper(n, i + 1));
+	else if (n == i)
+		return (1);
+
+	else if (n % i == 0)
+		return (0);
+
+	else
+		return (_is_prime_helper(n, i + 1));
 }
