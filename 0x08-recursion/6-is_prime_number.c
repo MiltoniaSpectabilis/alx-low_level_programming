@@ -20,16 +20,12 @@ int is_prime_number(int n)
 }
 
 /**
- * _is_prime_helper - checks if a number is prime using recursion
- * @n: the input number
- * @i: the current integer to check if it divides n
+ * _is_prime_helper - Checks if a number is prime
  *
- * Return: int - 1 if the number is prime, or
- *               0 if the number is not prime
+ * @n: The number to check
+ * @i: The current divisor to check
  *
- * This helper function is called by is_prime_number and recursively
- * checks if a given number n is prime. If a divisor is found, it
- * returns 0; otherwise, it returns 1 when i reaches n.
+ * Return: 1 if the number is prime, 0 otherwise
  */
 
 int _is_prime_helper(int n, int i)
