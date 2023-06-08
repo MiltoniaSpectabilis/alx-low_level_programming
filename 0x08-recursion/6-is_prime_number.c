@@ -9,9 +9,6 @@ int _is_prime_helper(int n, int i);
  * Return: int - 1 if the number is prime, or
  *               0 if the number is not prime
  *
- * This function checks if a given number n is prime by calling
- * the helper function _is_prime_helper. If n is less than or
- * equal to 1, it returns 0.
  */
 
 int is_prime_number(int n)
