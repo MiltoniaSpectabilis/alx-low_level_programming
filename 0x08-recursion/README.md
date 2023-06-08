@@ -1,1 +1,1 @@
-A directory containing C functions written recursively.
+A directory containing C functions written recursively
