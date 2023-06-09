@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-/*
+/**
  * main - calculates the sum of integers passed as command line arguments
  * @argc: the number of argument passed to the program
  * @argv: an array containing the program arguments
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 		if (num < 0)
 		{
 			printf("Error\n");
-			return 1;
+			return (1);
 		}
 
 		sum += num;
