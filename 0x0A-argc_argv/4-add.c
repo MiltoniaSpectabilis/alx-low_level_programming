@@ -9,10 +9,12 @@
  * Return: 0 if calculation succeeds, 1 if there is an error
  */
 
+#include <stdio.h>
+#include "main.h"
 
 int main(int argc, char *argv[])
 {
-	int i, j, num, sum = 0;
+	int i, j, sum = 0;
 
 	if (argc == 1)
 	{
@@ -31,18 +33,17 @@ int main(int argc, char *argv[])
 			}
 		}
 
-		num = atoi(argv[i]);
+		sum += atoi(argv[i]);
 
-		if (num < 0)
+		if (sum < 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
-
-		sum += num;
 	}
 
 	printf("%d\n", sum);
 
 	return (0);
 }
+
