@@ -3,10 +3,12 @@
 #include "main.h"
 
 /**
- * Frees the memory allocated for a 2D grid.
+ * free_grid - Frees the memory allocated for a 2D grid.
+ * @grid: Pointer to a pointer of type int representing the 2D grid.
+ * @height: The number of rows in the grid.
  *
- * @param grid   Pointer to a pointer of type int representing the 2D grid.
- * @param height The number of rows in the grid.
+ * Description: This function frees the memory allocated for a 2D grid
+ * created using the alloc_grid function.
  */
 void free_grid(int **grid, int height)
 {
