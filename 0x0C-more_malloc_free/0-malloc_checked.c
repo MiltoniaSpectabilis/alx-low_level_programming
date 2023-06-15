@@ -1,3 +1,4 @@
+#include <limits.h>
 #include <stdlib.h>
 #include "main.h"
 
@@ -12,7 +13,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *p = malloc(b);
 
-	if (p == NULL)
+	if (p == NULL || b == INT_MAX)
 		exit(98);
 
 	return (p);
