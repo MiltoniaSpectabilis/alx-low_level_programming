@@ -30,10 +30,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	newstr = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (newstr == NULL)
-		return NULL;
+		return (NULL);
 
 	strcpy(newstr, s1);
 	strncat(newstr, s2, len2);
 
-	return newstr;
+	return (newstr);
 }
