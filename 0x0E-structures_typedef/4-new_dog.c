@@ -8,11 +8,13 @@
  * @age: Age of the dog.
  * @owner: Pointer to the owner string.
  *
- * Return: Pointer to the newly created dog, or NULL if memory allocation fails.
+ * Return: Pointer to the newly created dog,
+ *         or NULL if memory allocation fails.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newDog = malloc(sizeof(dog_t));
+
 	if (newDog == NULL)
 		return (NULL); /* Return NULL if memory allocation fails */
 
