@@ -1,6 +1,7 @@
-#ifndef ABS_H
-#define ABS_H
+#ifndef ABS_HEADER_H
+#define ABS_HEADER_H
 
 #define ABS(x) ((x) < (0) ? -(x) : (x))
 
-#endif /* ABS_H */
+#endif /* ABS_HEADER_H */
+
