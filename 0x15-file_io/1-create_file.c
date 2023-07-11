@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * save_file - Save content to a file
+ * create_file - Save content to a file
  * @filename: The name of the file
- * @content: The content to be written into the file
+ * @text_content: The content to be written into the file
  *
  * Return: 1 on success, -1 on failure
  */
