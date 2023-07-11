@@ -11,7 +11,7 @@ int save_file(const char *filename, const char *content)
 {
 	int file_descriptor;
 	int num_letters;
-	int return_value;
+	int ret_value;
 
 	if (!filename)
 		return (-1);
@@ -27,12 +27,11 @@ int save_file(const char *filename, const char *content)
 	while (content[num_letters])
 		num_letters++;
 
-	return_value = write(file_descriptor, content, num_letters);
-	if (return_value == -1)
+	ret_value = write(file_descriptor, content, num_letters);
+	if (ret_value == -1)
 		return (-1);
 
 	close(file_descriptor);
 
 	return (1);
 }
-
