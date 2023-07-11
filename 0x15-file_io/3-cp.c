@@ -1,70 +1,70 @@
 #include "main.h"
 
 /**
- * check_file_access - checks if files can be opened.
- * @source_file: the source file.
- * @destination_file: the destination file.
+ * error_file - program checks if files can be opened.
+ * @file_from: file_from.
+ * @file_to: file_to.
  * @argv: arguments vector.
  * Return: no return.
  */
-void check_file_access(int source_file, int destination_file, char *argv[])
+void error_file(int file_from, int file_to, char *argv[])
 {
-	if (source_file == -1)
+	if (file_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Unable to access source file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	if (destination_file == -1)
+	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Unable to access destination file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 }
 
 /**
- * main - program to copy a file.
+ * main - program check the code for ALX AFRICA SE students.
  * @argc: number of arguments.
  * @argv: arguments vector.
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
-	int source_file, destination_file, err_close;
+	int file_from, file_to, err_close;
 	ssize_t nchars, nwr;
 	char buf[1024];
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp source_file destination_file");
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
-	source_file = open(argv[1], O_RDONLY);
-	destination_file = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC |
-			O_APPEND, 0664);
-	check_file_access(source_file, destination_file, argv);
+
+	file_from = open(argv[1], O_RDONLY);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	error_file(file_from, file_to, argv);
 
 	nchars = 1024;
 	while (nchars == 1024)
 	{
-		nchars = read(source_file, buf, 1024);
+		nchars = read(file_from, buf, 1024);
 		if (nchars == -1)
-			check_file_access(-1, 0, argv);
-		nwr = write(destination_file, buf, nchars);
+			error_file(-1, 0, argv);
+		nwr = write(file_to, buf, nchars);
 		if (nwr == -1)
-			check_file_access(0, -1, argv);
+			error_file(0, -1, argv);
 	}
 
-	err_close = close(source_file);
+	err_close = close(file_from);
 	if (err_close == -1)
 	{
-		dprintf(STDERR_FILENO, "Unable to close source file %d\n", source_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
-	err_close = close(destination_file);
+
+	err_close = close(file_to);
 	if (err_close == -1)
 	{
-		dprintf(STDERR_FILENO, "Unable to close destination file %d\n",
-				destination_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 	return (0);
