@@ -7,7 +7,7 @@
  *
  * Return: 1 on success, -1 on failure
  */
-int save_file(const char *filename, const char *content)
+int create_file(const char *filename, char *text_content)
 {
 	int file_descriptor;
 	int num_letters;
@@ -20,14 +20,14 @@ int save_file(const char *filename, const char *content)
 	if (file_descriptor == -1)
 		return (-1);
 
-	if (!content)
-		content = "";
+	if (!text_content)
+		text_content = "";
 
 	num_letters = 0;
-	while (content[num_letters])
+	while (text_content[num_letters])
 		num_letters++;
 
-	ret_value = write(file_descriptor, content, num_letters);
+	ret_value = write(file_descriptor, text_content, num_letters);
 	if (ret_value == -1)
 		return (-1);
 
