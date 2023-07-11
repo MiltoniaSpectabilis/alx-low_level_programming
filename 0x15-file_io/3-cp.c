@@ -38,10 +38,9 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp source_file destination_file");
 		exit(97);
 	}
-
 	source_file = open(argv[1], O_RDONLY);
-	destination_file = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC
-			| O_APPEND, 0664);
+	destination_file = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC |
+			O_APPEND, 0664);
 	check_file_access(source_file, destination_file, argv);
 
 	nchars = 1024;
