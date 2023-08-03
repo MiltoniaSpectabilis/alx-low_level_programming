@@ -6,6 +6,7 @@
  * @b: random integer
  * Return: prod
  */
+
 int mul(int a, int b)
 {
 	int prod;
