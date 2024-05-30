@@ -1,1 +1,24 @@
-#!/usr/bin/env bash
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+    $(CC) $^ -o $@
+
+.c.o:
+    $(CC) -c $<
+
+clean:
+    $(RM) *~ *.swp
+
+oclean:
+    $(RM) *.o
+
+fclean: clean oclean
+    $(RM) $(NAME)
+
+re: fclean all
